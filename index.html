@@ -392,6 +392,21 @@ When I'm not coding or analyzing data, you'll probably find me exploring music p
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
+<script>
+  // Preloader fix
+  window.addEventListener('load', function() {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+      // Add class to hide preloader
+      preloader.classList.add('preloader-hidden');
+      
+      // Optional: Remove preloader from DOM after animation
+      setTimeout(function() {
+        preloader.style.display = 'none';
+      }, 1000);
+    }
+  });
+</script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
